@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aion2-daeva-command-center",
+  "compatibility_date": "2026-09-20",
+  "assets": {
+    "directory": ".",
+    "exclude": [
+      "README.md",
+      "run_local.bat",
+      "run_local.ps1",
+      "wrangler.jsonc"
+    ]
+  }
+}
