@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070b12" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="AION II Daeva Command Center — tracker de alts, diarias y semanales." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css?v=27" />
+  <title>AION II • Daeva Command Center</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <div class="brand-mark">A2</div>
+        <div>
+          <div class="eyebrow">AION II</div>
+          <h1>DAEVA COMMAND CENTER</h1>
+          <div class="brand-by">BY <strong>DKINGHD</strong></div>
+        </div>
+      </div>
+      <div class="reset-banner" id="reset-banner" aria-label="Próximos resets"></div>
+      <div class="header-actions">
+        <div class="install-actions" role="group" aria-label="Instalación de la aplicación">
+          <button class="btn pwa-install" id="btn-install" aria-label="Instalar AION II Daeva Command Center">⬇ INSTALAR APP <span class="install-new-badge">RECOMENDADO</span></button>
+          <button class="btn install-help-btn" id="btn-install-help" aria-label="Cómo instalar" title="Cómo instalar">?</button>
+        </div>
+        <button class="btn btn-support" id="btn-support">☕ APOYAR</button>
+        <button class="btn btn-ghost" id="btn-history">HISTORIAL</button>
+        <button class="btn btn-ghost" id="btn-resets">⚙ RESETS</button>
+        <button class="btn btn-ghost" id="btn-font">Aa TEXTO</button>
+        <button class="btn btn-ghost" id="btn-export">EXPORTAR</button>
+        <button class="btn btn-ghost" id="btn-import">IMPORTAR</button>
+      </div>
+    </header>
+
+    <div class="main-grid scale-text" id="main-grid">
+      <aside class="panel roster-panel">
+        <div class="panel-header">
+          <div>
+            <div class="section-kicker">ROSTER</div>
+            <h2>DAEVA LIST</h2>
+          </div>
+          <div class="roster-tools">
+            <button class="icon-btn" id="btn-up" title="Subir personaje">↑</button>
+            <button class="icon-btn" id="btn-down" title="Bajar personaje">↓</button>
+          </div>
+        </div>
+        <div class="roster-actions">
+          <button class="btn btn-primary" id="btn-add-char">+ PERSONAJE</button>
+          <button class="btn btn-small" id="btn-edit-char">EDITAR</button>
+          <button class="btn btn-small btn-danger" id="btn-delete-char">ELIMINAR</button>
+        </div>
+        <div class="roster-list" id="roster-list"></div>
+        <div class="roster-hint">Selecciona un alt y usa ↑ / ↓ para cambiar su posición.</div>
+      </aside>
+
+      <main class="panel content-panel">
+        <div class="character-header" id="character-header"></div>
+
+        <section class="calendar-section">
+          <div class="section-title-row">
+            <div>
+              <div class="section-kicker">WEEKLY BOARD</div>
+              <h2>CALENDARIO SEMANAL</h2>
+            </div>
+          </div>
+          <div class="week-grid" id="week-grid"></div>
+        </section>
+
+        <section class="quest-section">
+          <div class="section-title-row quest-head">
+            <div class="quest-tabs">
+              <button class="quest-tab active" data-type="diaria" id="tab-daily">DIARIAS <span>0/0</span></button>
+              <button class="quest-tab" data-type="semanal" id="tab-weekly">SEMANALES <span>0/0</span></button>
+            </div>
+            <div class="quest-controls">
+              <button class="btn btn-small" id="btn-pending">◌ SOLO PENDIENTES</button>
+              <button class="btn btn-small" id="btn-clear">↺ LIMPIAR</button>
+              <button class="btn btn-small" id="btn-undo" disabled>↶ DESHACER</button>
+            </div>
+          </div>
+          <div class="quest-log" id="quest-log"></div>
+        </section>
+
+        <section class="actions-row">
+          <div class="action-group">
+            <button class="btn btn-primary" id="btn-complete-daily">✓ DIARIAS</button>
+            <button class="btn btn-secondary" id="btn-complete-weekly">✓ SEMANALES</button>
+          </div>
+          <button class="btn btn-small" id="btn-manage-quests">GESTIONAR MISIONES</button>
+        </section>
+      </main>
+    </div>
+    <footer class="app-footer">AION II Daeva Command Center · <strong>by dkinghd</strong></footer>
+  </div>
+
+  <input type="file" id="import-file" accept="application/json,.json" hidden />
+  <div id="modal-root"></div>
+  <div id="toast-root" aria-live="polite"></div>
+
+  <script src="app.js?v=27" defer></script>
+</body>
+</html>
