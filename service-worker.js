@@ -1,9 +1,9 @@
-const CACHE = 'aion2-daeva-v2-7';
+const CACHE = 'aion2-daeva-v2-8';
 const APP_SHELL = [
   './',
   './index.html',
-  './styles.css?v=27',
-  './app.js?v=27',
+  './styles.css?v=28',
+  './app.js?v=28',
   './manifest.webmanifest',
   './favicon.svg',
   './icon-192.png',

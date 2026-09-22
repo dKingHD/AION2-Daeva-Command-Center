@@ -612,13 +612,35 @@ function showQuestManager(){
 
 function showSupport(){
   const body = `<div class="support-modal">
-    <div class="support-brand">AION II DAEVA COMMAND CENTER</div>
-    <div class="support-by">Creado y mantenido por <strong>dkinghd</strong></div>
-    <p>Esta herramienta es un proyecto comunitario pensado para facilitar la gestión de personajes, actividades diarias y semanales de AION II.</p>
-    <p class="support-muted">Si te resulta útil y quieres apoyar su mantenimiento y futuras mejoras, puedes hacerlo desde el siguiente enlace.</p>
+    <div class="support-hero">
+      <div class="support-icon">☕</div>
+      <div>
+        <div class="support-kicker">PROYECTO COMUNITARIO</div>
+        <div class="support-title">APOYA A <span>DKINGHD</span></div>
+      </div>
+    </div>
+    <p class="support-copy">Daeva Command Center es una herramienta gratuita creada y mantenida por <strong>dkinghd</strong> para facilitar la gestión de personajes y actividades de AION II.</p>
+    <div class="support-options">
+      <div class="support-option">
+        <div class="support-option-icon">☕</div>
+        <div>
+          <div class="support-option-title">APOYO ÚNICO</div>
+          <div class="support-option-text">Una ayuda puntual para mantener y seguir mejorando el proyecto.</div>
+        </div>
+      </div>
+      <div class="support-option">
+        <div class="support-option-icon monthly">💙</div>
+        <div>
+          <div class="support-option-title">APOYO RECURRENTE</div>
+          <div class="support-option-text">Si prefieres apoyar el proyecto de forma continuada, puedes elegir esa opción en Ko-fi.</div>
+        </div>
+      </div>
+    </div>
+    <div class="support-note">Todo el contenido del tracker sigue siendo gratuito.</div>
     ${SUPPORT_URL
-      ? `<a class="btn support-cta" href="${SUPPORT_URL}" target="_blank" rel="noopener noreferrer">☕ APOYAR A DKINGHD</a>`
+      ? `<a class="btn support-cta" href="${SUPPORT_URL}" target="_blank" rel="noopener noreferrer">☕ IR A KO-FI <span>↗</span></a>`
       : `<div class="support-placeholder">ENLACE DE APOYO PENDIENTE</div>`}
+    <div class="support-brandline">AION II DAEVA COMMAND CENTER · <strong>by dkinghd</strong></div>
   </div>`;
   openModal('APOYAR EL PROYECTO', body, '<button class="btn btn-ghost" data-close>CERRAR</button>');
 }

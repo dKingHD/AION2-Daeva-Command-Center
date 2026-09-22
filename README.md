@@ -1,4 +1,4 @@
-# AION2 Daeva Command Center Web v2.7
+# AION2 Daeva Command Center Web v2.8
 
 Versión web estática del tracker AION2. Usa IndexedDB para guardar los datos de cada usuario localmente en el navegador. La aplicación también está preparada como PWA para instalarse como una app desde navegadores compatibles.
 
@@ -43,3 +43,11 @@ La v2.6 incorpora la marca `by dkinghd` y el botón `APOYAR`. El enlace de apoyo
 - Enlace de apoyo configurado: https://ko-fi.com/dkinghd_
 - El botón `☕ APOYAR` abre la sección de apoyo con enlace directo a Ko-fi.
 - Recursos y Service Worker versionados a v2.7.
+
+
+## v2.8
+- Sección `☕ APOYAR` renovada con presentación más clara y discreta.
+- Branding `by dkinghd` reforzado dentro de la sección de apoyo.
+- Enlace directo a Ko-fi: https://ko-fi.com/dkinghd_
+- Sin objetivo económico: se mantiene la sección limpia y centrada en el apoyo voluntario.
+- Service Worker y recursos versionados a v2.8.
